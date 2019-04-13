@@ -6,6 +6,7 @@ Welcome to narcpack's documentation!
    :caption: Contents:
 
    install.rst
+   background.rst
 
 
 

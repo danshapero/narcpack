@@ -7,20 +7,23 @@ class OrthoPoly:
 
     Implements Gram-Schmidt orthogonalization
     to construct the polynomial basis
-
-    Parameters
-    func: function to approximate
-    interval: tuple (start, end)
-
     """
     def __init__(self, func, interval=[-1,1], n=3):
         """
         Gram-Schmidt to construct orthogonal polynomial basis
-        Returns the m approximated points using n degree polynomial
+
+        Returns the `m` approximated points using `n`-degree polynomial
 
         Parameters
-        n: number of polynomials to use as basis
-        m: number of points to evaluate the function at
+        ----------
+        func: function
+            the real function to approximate
+        interval: tuple of float
+            the start and end-point
+        n: int
+            number of polynomials to use as basis
+        m: int
+            number of points to evaluate the function at
         """
         self.func = func
         self.interval = interval

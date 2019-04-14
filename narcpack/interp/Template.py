@@ -7,9 +7,10 @@ class Template:
         """Initialize interpolation class
 
         Parameters:
-        x : one-dimensional real array
-        y : one-dimensional real array of same length as x
-        optArg1, ... : optional arguments
+            x : array of float
+            y : array of float
+                Must be the same length as `x`
+            optArg1, ... : optional arguments
 
         This function should perform the interpolation once Template is initialized."""
 

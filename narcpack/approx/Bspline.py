@@ -11,16 +11,16 @@ class Bspline:
         Parameters
         ---------
         f : 1-d function
-        Approximant mapping reals to reals.
+            Approximant mapping reals to reals.
 
         interval :  real pair.
-        Domain over which to approximate.
+            Domain over which to approximate.
 
         nControl : positive integer.
-        Number of ("control") points at which to sample f within interval.
+            Number of ("control") points at which to sample f within interval.
 
         deg : integer
-        Degree of spline approximator.
+            Degree of spline approximator.
         """
         self.nControl = nControl
         self.deg = deg

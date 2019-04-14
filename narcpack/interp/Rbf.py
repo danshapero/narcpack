@@ -8,10 +8,12 @@ class Rbf:
     def __init__(self, x, y, function='multiquadric'):
         """Initialize interpolation class
 
-        Parameters:
+        Parameters
+        ----------
         x : one-dimensional real array
         y : one-dimensional real array of same length as x
-        function (optional) : string specifying the kernel to use. Options include
+        function : string, optional
+            specifies the kernel to use. Options include
             'multiquadric'         : 
             'inverse multiquadric' : 
             'inverse quadratic'    :

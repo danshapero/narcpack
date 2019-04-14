@@ -17,20 +17,19 @@ def smoothed_fd_diff(X, t, method="forward difference", smoother=None, window_le
         Times when measurements in X were taken. If scalar, we assume a uniform
         time step.
 
-    method (optional) : str
+    method : str, optional
         Which finite difference method to use. Options include
             "forward difference"
             "centered difference"
 
-    smoother (optional) : str
+    smoother : str, optional
         Which smoothing method to use. Options include
             "savgol" for a Savitzky-Golay filter
             "median" for a median filter
             "wiener" for a wiener filter
 
-    window_length (optional) : int
+    window_length : int, optional
         The length of the window the smoother should use.
-
     """
 
     # Require an odd window length

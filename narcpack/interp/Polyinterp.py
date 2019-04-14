@@ -7,9 +7,12 @@ class Polyinterp(Poly):
     def __init__(self, x, y):
         """Initialize interpolation class
 
-        Parameters:
-        x : one-dimensional real array
-        y : one-dimensional real array of same length as x"""
+        Parameters
+        ----------
+            x : array of float
+            y : array of float
+                must be the same length as x
+        """
 
         V = np.zeros([len(x),len(y)])
         for i in range(len(y)):

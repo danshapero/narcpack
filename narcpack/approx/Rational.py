@@ -19,25 +19,23 @@ class Rational:
         Parameters
         ----------
         f : 1-D function
-        Function to be approximated. Should be real-valued and accept real inputs.
-
-        interval : array-like, optional (not quite working yet--best to leave as [-1,1])
+            Function to be approximated. Should be real-valued and accept real
+            inputs.
+        interval : array of real, optional
+            (Not quite working yet--best to leave as [-1,1].)
             Left and right endpoints of interval over which to approximate f.
             f is approximated over interval[0] <= x <= interval[1].
             Modifies the interval variable of the Rational_approximation object to match interval
-
-        degs : array-like, optional
+        degs : array of int, optional
             Degrees of the polynomials in the numerator and denominator.
             deg(numerator) = degs[0], deg(denominator) = degs[1]
-
-        coeffs : array-like, optional
+        coeffs : array, optional
             Array-like object with two entries. The first should contain the Chebyshev cofficients
             of the numerator and the second the Chebyshev coefficients of the denominator of
             the rational approximation. coeffs may also be a dict with keys num and denom with
             corresponding values the Chebyshev coefficients of the numerator and denominator.
             Note: passing in coefficients will cause the function f to be ignored
 
-        
         Example
         ----------
         import matplotlib.pyplot as plt

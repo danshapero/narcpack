@@ -43,6 +43,13 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+# Tell autodoc to include the initializer and call methods
+autodoc_default_options = {
+    'members': True,
+    'special-members': '__init__, __call__',
+    'member-order': 'bysource'
+}
+
 
 # -- Options for HTML output -------------------------------------------------
 

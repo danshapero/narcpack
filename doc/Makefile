@@ -1,5 +1,14 @@
-# Minimal makefile for Sphinx documentation
-#
+# Find all files that end in `.ipynb` in the examples directory and sort them
+EXAMPLE_FILES=$(shell find ../examples -not -path '*/\.*' -type f -name '*\.ipynb' | sort)
+examples: $(patsubst ../examples/%.ipynb,source/narcpack.examples.%.rst,$(EXAMPLE_FILES))
+
+# For each demo, execute it with a longer timeout, convert it to restructured
+# text, and save the result in the `source` directory with `narcpack.examples.`
+# prepended to the name.
+source/narcpack.examples.%.rst: ../examples/%.ipynb
+	jupyter nbconvert --to rst \
+			  --execute --ExecutePreprocess.timeout=24000 \
+			  --output-dir=./source --output=`basename $@` $<
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
@@ -13,7 +22,7 @@ help:
 
 .PHONY: help clean Makefile
 
-html: Makefile source/index.rst
+html: Makefile examples source/index.rst
 	sphinx-apidoc --force --separate --maxdepth=1 --module-first --output-dir source ../narcpack
 	rm source/modules.rst
 	sed -i 's/narcpack package/API reference/g' source/narcpack.rst

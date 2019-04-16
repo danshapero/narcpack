@@ -7,7 +7,7 @@ Welcome to narcpack's documentation!
 
    install.rst
    background.rst
-   modules.rst
+   narcpack.rst
 
 
 Indices and tables

@@ -15,7 +15,9 @@ help:
 
 html: Makefile source/index.rst
 	sphinx-apidoc --force --separate --maxdepth=1 --module-first --output-dir source ../narcpack
+	rm source/modules.rst
+	sed -i 's/narcpack package/API reference/g' source/narcpack.rst
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 clean:
-	rm -rf build source/narcpack* source/modules.rst
+	rm -rf build source/narcpack*

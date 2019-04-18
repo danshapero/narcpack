@@ -2,12 +2,11 @@ Welcome to narcpack's documentation!
 ====================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: Basics:
 
    install.rst
    background.rst
-   narcpack.rst
 
 .. toctree::
    :maxdepth: 1
@@ -16,6 +15,13 @@ Welcome to narcpack's documentation!
    narcpack.examples.diff.rst
    narcpack.examples.interp.rst
    narcpack.examples.approx.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Developers:
+
+   narcpack.rst
+   contributing.rst
 
 
 Indices and tables
